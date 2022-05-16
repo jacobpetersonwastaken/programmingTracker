@@ -1,0 +1,37 @@
+int itsWorking = 8;
+int programTracker = 12;
+String incomingByte ;
+bool pressed = false;
+int itsWorkingCounter = 0;
+int programTrackerCounter = 0;
+void setup() {
+  Serial.begin(115200);
+
+  pinMode(itsWorking, INPUT_PULLUP);
+  pinMode(programTracker, INPUT_PULLUP);
+}
+
+void loop() {
+  bool itsWorkingState = digitalRead(itsWorking);
+  if (itsWorkingState == pressed) {
+    if (itsWorkingCounter == 0) {
+      Serial.write("w");
+      itsWorkingCounter += 1;
+    }
+  }
+
+  bool programTrackerState = digitalRead(programTracker);
+  if (programTrackerState == pressed) {
+    if (programTrackerCounter == 0) {
+      Serial.write("u");
+      programTrackerCounter += 1;
+    }
+  }
+  if (Serial.available() > 0) {
+    incomingByte = Serial.readStringUntil('\n');
+      if (incomingByte == "o") {
+        programTrackerCounter = 0;
+        itsWorkingCounter = 0;
+      }
+    }
+}
