@@ -6,6 +6,7 @@ from PixelaCode import PixelaCode
 from PlayVideo import PlayVideo
 from os import getenv
 
+
 class SessionBrain:
     """Decides if any of the programs logged are overlapping and gives accurate count of hours to log to pixela"""
     hours_to_log = 0
@@ -17,7 +18,7 @@ class SessionBrain:
     def sum_day_time(self, date_to_sum):
         with open('runtime_sessions.json', 'r') as f:
             data = load(f)
-        """Creates useable list for the df"""
+        """Creates useable list for the df aka dataframe"""
         start_list = []
         for i in data[date_to_sum]:
             name = i

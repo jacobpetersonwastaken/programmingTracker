@@ -75,7 +75,6 @@ def program_runtime():
                 try:
                     if self.creation_time == 0:
                         self.creation_time = running_apps[0].as_dict()['create_time']
-                    # sleep(refresh_rate_seconds)
                 except:
                     pass
             elif self.creation_time > 0 and len(running_apps) == 0:
@@ -97,7 +96,6 @@ def program_runtime():
                 media_path = getenv('MEDIA_4_FILE_PATH')
                 pl.play_video(fr"{media_path}", 3.5)
                 self.creation_time = 0
-                # sleep(refresh_rate_seconds)
 
     thread_obj = [ProgramRuntime() for _ in range(0, 7)]
     while True:

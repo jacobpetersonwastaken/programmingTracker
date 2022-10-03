@@ -5,6 +5,8 @@ from PlayVideo import PlayVideo
 from SessionBrain import SessionBrain
 from dotenv import load_dotenv
 from os import getenv
+
+
 class Arduino:
     arduino = Serial('COM8', 115200)
     arduino.timeout = 1
@@ -49,6 +51,7 @@ class Arduino:
             self.counter = 0
         self.arduino.write("o".encode())
         sleep(0.3)
+
     def run_arduino(self):
         while True:
             on = self.arduino.readline().decode('utf-8')
