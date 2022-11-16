@@ -11,6 +11,7 @@ from PlayVideo import PlayVideo
 
 load_dotenv('.env')
 refresh_rate_seconds = 10
+trackPrograms = ["pycharm64.exe", "Code.exe", "studio64.exe", "idea64.exe", "atom.exe", "Unity.exe", "javaw.exe"]
 
 
 def log_session(session_date, session_name: str, start_time, end_time, session_in_hours: float):
@@ -59,7 +60,6 @@ def log_session(session_date, session_name: str, start_time, end_time, session_i
 
 
 def program_runtime():
-    trackPrograms = ["pycharm64.exe", "Code.exe", "studio64.exe", "idea64.exe", "atom.exe", "Unity.exe", "javaw.exe"]
 
     class ProgramRuntime:
         creation_time = 0
