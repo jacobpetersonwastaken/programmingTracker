@@ -24,4 +24,4 @@ I chose to have the program log anything from 0AM to 4AM on the previous day.
 Also if there are a couple of days that don't get posted, when you finally do post
 the time will just get summed and posted on the first day missed.
 
-Send me a message on twitter [@melockchain](https://twitter.com/melockchain) for any comments on how I can improve it or feature ideas.
+![Image of Extension](https://github.com/jacobpetersonwastaken/programmingTracker/blob/main/programmingtracker.gif)
